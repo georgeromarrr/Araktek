@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {BrandLogo, HeartIcon, SearchIcon, CartIcon, UserIcon, MenuIcon, HeartFilledIcon, UserRegIcon} from './NavbarComponents'
+import {BrandLogo, HeartIcon, SearchIcon, CartIcon, UserIcon, MenuIcon, HeartFilledIcon, UserRegIcon} from './NavbarComponents';
 
 
 const Navbar = () => {
   return (
-    <div className='fixed top-0 left-0 right-0 bg-red-50'>
-      <nav className='container py-3 mx-auto px-4 flex justify-between'>
+    <div className='fixed top-0 left-0 right-0 bg-white'>
+      <nav className='py-3 mx-auto px-4 flex justify-between'>
         <div>
           <BrandLogo/>
         </div>
@@ -20,7 +20,7 @@ const Navbar = () => {
 
         <div className='flex self-center gap-x-5'>
           <Link className='nav-items' to='/'>
-            <SearchIcon className='lg-laptop:h-12'/>
+            <SearchIcon/>
           </Link> 
           <Link className='nav-items lg-laptop:hidden' to='/about'>
             <UserIcon/>

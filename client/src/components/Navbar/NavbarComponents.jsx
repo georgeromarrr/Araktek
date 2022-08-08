@@ -6,6 +6,7 @@ export const BrandLogo = () => {
   )
 }
 
+// Icons
 export const HeartFilledIcon = () => {
   return (
     <svg version="1.1" xmlns="https://www.w3.org/2000/svg" className='h-5 w-5' viewBox="0 0 64 64">
