@@ -1,0 +1,35 @@
+/* title fonts */
+.font-dge_bold {
+  font-family: "DGE Bold";
+  letter-spacing: 3px;
+}
+
+/*navbar*/
+.nav-items {
+  font-family: "DGE Bold";
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.nav-category:hover {
+  color: #9a9a99;
+}
+
+.nav-items:hover {
+  color: #000000;
+}
+
+/* footer */
+.newsletter {
+  border: none !important;
+}
+
+.newsletter:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.footer-item:hover {
+  color: #9a9a99;
+}
