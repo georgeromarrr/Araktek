@@ -11,7 +11,7 @@ const Navbar = () => {
           <BrandLogo/>
         </div>
 
-        <div className='nav-category flex self-center gap-x-8 text-lg lg-laptop:hidden'>
+        <div className='nav-category flex self-center gap-x-8 text-lg laptop:hidden tablet:hidden mobile:hidden'>
           <Link className='nav-items' to='/'>SHOP</Link> 
           <Link className='nav-items' to='/'>PC</Link>
           <Link className='nav-items' to='/about'>ACCESSORIES</Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link className='nav-items' to='/'>
             <SearchIcon/>
           </Link> 
-          <Link className='nav-items lg-laptop:hidden' to='/about'>
+          <Link className='nav-items laptop:hidden tablet:hidden mobile:hidden' to='/about'>
             <UserIcon/>
           </Link>
           <Link className='nav-items' to='/'>
@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link className='nav-items' to='/'>
             <CartIcon/>
           </Link>
-          <button className='desktop:hidden lg-laptop:block'>
+          <button className='desktop:hidden laptop:block'>
             <MenuIcon/>
           </button>
         </div>
