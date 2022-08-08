@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DGE Bold"; /*Can be any text*/
+  src: local("DharmaGothicE_Bold_R"),
+    url("./fonts/dharma-gothic-e/DharmaGothicE_Bold_R.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DGE Extra-Bold";
+  src: local("DharmaGothicE_ExBold_R"),
+    url("./fonts/dharma-gothic-e/DharmaGothicE_ExBold_R.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DGE Heavy";
+  src: local("DharmaGothicE_Heavy_R"),
+    url("./fonts/dharma-gothic-e/DharmaGothicE_Heavy_R.otf") format("opentype");
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* scrollbar-track */
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* scrollbarhandler */
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+/* scrollbarhandler */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9a9a99;
+}
+
+/*navbar*/
+.nav-items {
+  font-family: "DGE Bold";
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.nav-category:hover {
+  color: #9a9a99;
+}
+
+.nav-items:hover {
+  color: black;
+}
