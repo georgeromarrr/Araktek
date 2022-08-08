@@ -6,7 +6,7 @@ import {BrandLogo, HeartIcon, SearchIcon, CartIcon, UserIcon, MenuIcon, HeartFil
 const Navbar = () => {
   return (
     <div className='fixed top-0 left-0 right-0 bg-white'>
-      <nav className='py-3 mx-auto px-4 flex justify-between'>
+      <nav className='container py-3 mx-auto px-4 flex justify-between'>
         <div>
           <BrandLogo/>
         </div>
