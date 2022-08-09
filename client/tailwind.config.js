@@ -8,19 +8,13 @@ module.exports = {
       'desktop': {'min': '1201px'},
       // => @media (min-width: 1200px) { ... }
 
-      'lg-laptop': {'max': '1200px'},
-      // => @media (min-width: 1200px) { ... }
-
-      'md-laptop': {'max': '992px'},
-      // => @media (max-width: 1023px) { ... }
-
-      'tablet': {'max': '768px'},
-      // => @media (max-width: 767px) { ... }
-
+      'laptop': {'min': '768px', 'max': '1200px'},
+      'tablet': {'min': '475px', 'max': '768px'},
       'mobile': {'max': '475px'},
-      // => @media (max-width: 639px) { ... }
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
