@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
 
         <div className='nav-category flex self-center gap-x-8 text-lg laptop:hidden tablet:hidden mobile:hidden'>
-          <Link className='nav-items' to='/'>SHOP</Link> 
+          <Link className='nav-items' to='/'>PRODUCT</Link> 
           <Link className='nav-items' to='/'>PC</Link>
           <Link className='nav-items' to='/about'>ACCESSORIES</Link>
           <Link className='nav-items' to='/'>COLLECTIBLES</Link>

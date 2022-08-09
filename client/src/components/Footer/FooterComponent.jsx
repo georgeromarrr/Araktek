@@ -34,19 +34,19 @@ export const RightIcon = () => {
 // Team Avatar
 export const Romar = () => {
   return (
-    <img className='h-20 w-20 rounded-full' src={romarimg} alt='Romar Image' />
+    <img className='h-20 w-20 rounded-full' src={romarimg} alt='Romar Avatar' />
   )
 }
 
 export const Louie = () => {
   return (
-    <img className='h-20 w-20 rounded-full' src={louieimg} alt='Louie Image' />
+    <img className='h-20 w-20 rounded-full' src={louieimg} alt='Louie Avatar' />
   )
 }
 
 export const John = () => {
   return (
-    <img className='h-20 w-20 rounded-full' src={johnimg} alt='John Image' />
+    <img className='h-20 w-20 rounded-full' src={johnimg} alt='John Avatar' />
   )
 }
 
@@ -121,7 +121,7 @@ export const FooterDetails = () => {
         <div className='text-white my-10 w-full'>
           <div className='footer-men border-b-[1px] border-white h-13'>
             <button className='w-full flex justify-between items-center mb-4' onClick={()=> {setSupportOpen(!isSupportOpen)}}><p className='font-dge_bold text-3xl'>SUPPORT</p>
-            <span className={isSupportOpen && 'origin-center rotate-180'}><ArrIcon/></span>
+            <span className={isSupportOpen ? 'origin-center rotate-180' : ''}><ArrIcon/></span>
             {/* <span className='origin-center rotate-180'><ArrIcon/></span> */}
             </button>
 
@@ -139,7 +139,7 @@ export const FooterDetails = () => {
         <div className='text-white my-10'>
           <div className='border-b-[1px] border-white h-13'>
             <button className='w-full flex justify-between items-center mb-4'  onClick={()=> {setAboutOpen(!isAboutOpen)}}><p className='font-dge_bold text-3xl'>ABOUT</p>
-            <span className={isAboutOpen && 'origin-center rotate-180'}><ArrIcon/></span>
+            <span className={isAboutOpen ? 'origin-center rotate-180' : ''}><ArrIcon/></span>
             </button>
 
             {isAboutOpen && 

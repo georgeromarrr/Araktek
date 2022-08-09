@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import Logo from './bg-podium.svg';
+import Header from '../../components/Header/Header';
 
 
 const Home = () => {
   return (
     <div>
         <Navbar/>
-        {/* <img src={Logo} alt='asd'/> */}
+        <Header/>
         <Footer/>
     </div>
   )
