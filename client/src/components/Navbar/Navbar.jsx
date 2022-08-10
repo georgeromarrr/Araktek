@@ -5,11 +5,11 @@ import {BrandLogo, HeartIcon, SearchIcon, CartIcon, UserIcon, MenuIcon, HeartFil
 
 const Navbar = () => {
   return (
-    <div className='fixed top-0 left-0 right-0 bg-white'>
-      <nav className='container py-3 mx-auto px-4 flex justify-between'>
-        <div>
+    <div className='z-50  inset-x-1 top-[3px] left-[5px] right-1 bg-white rounded-t-md border-b border-black'>
+      <nav className='container py-4 mx-auto px-4 flex justify-between'>
+        <Link to='/'>
           <BrandLogo/>
-        </div>
+        </Link>
 
         <div className='nav-category flex self-center gap-x-8 text-lg laptop:hidden tablet:hidden mobile:hidden'>
           <Link className='nav-items' to='/'>PRODUCT</Link> 
