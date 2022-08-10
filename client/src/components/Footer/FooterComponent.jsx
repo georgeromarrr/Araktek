@@ -59,20 +59,22 @@ export const FooterDetails = () => {
   return (
     <>
     {/* desktop view */}
-    <div className='container mx-auto mt-14 pb-6 laptop:hidden tablet:hidden mobile:hidden'>
+    <div className='container mx-auto mt-14 pb-8 laptop:hidden tablet:hidden mobile:hidden'>
       <div className='flex justify-between px-4 pt-10'>
-        <div className=' text-white w-6/12'>
-          <FooterLogo/>
-          <p className='my-3'>Araktek is the go-to shop for pre-built pc, accessories and collectible items. With a wide range of quality products. Araktek has you covered for providing the latest and in-demand products available in our store at a reasonable price tag.</p>
+        <div className=' text-white w-6/12 mt-3'>
+          <Link to='/'>
+            <FooterLogo/>
+          </Link>
+          <p className='my-6'>Araktek is the go-to shop for pre-built pc, accessories and collectible items. With a wide range of quality products. Araktek has you covered for providing the latest and in-demand products available in our store at a reasonable price tag.</p>
         </div>
-        <div className='text-white mt-2'>
+        <div className='text-white mt-1'>
           <h1 className='font-dge_bold text-3xl mt-4 mb-7'>SUPPORT</h1>
           <Link to='/'><p className='my-2 footer-item'>Return & Refund</p></Link>
           <Link to='/'><p className='my-2 footer-item'>Order Cancellation</p></Link>
           <Link to='/'><p className='my-2 footer-item'>Warranty</p></Link>
           <Link to='/'><p className='my-2 footer-item'>FAQs</p></Link>
         </div>
-        <div className='text-white mt-2'>
+        <div className='text-white mt-1'>
           <h1 className='font-dge_bold text-3xl mt-4 mb-7'>ABOUT</h1>
           <Link to='/about'><p className='my-2 footer-item'>Company</p></Link>
           <Link to='/'><p className='my-2 footer-item'>Promos</p></Link>
@@ -102,9 +104,9 @@ export const FooterDetails = () => {
     </div>
 
     {/* laptop, tablet, mobile view */}
-    <div className='container mx-auto mt-14 pb-6 desktop:hidden'>
+    <div className='container mx-auto mt-14 pb-8 desktop:hidden'>
       <div className='px-4 pt-10'>
-        <div className=' text-white w-full pb-10'>
+        <div className=' text-white w-full pb-16'>
           <h1 className='font-dge_bold text-3xl mt-4'>KEEP IN TOUCH</h1>
           <p className="text-gray-200 text-sm mb-4">Subscribe to our newsletter to keep in touch</p>
           <form className="flex border p-1 w-full">
@@ -114,7 +116,9 @@ export const FooterDetails = () => {
         </div>
 
         <div className=' text-white w-full'>
-          <FooterLogo/>
+          <Link to='/'>
+            <FooterLogo/>
+          </Link>
           <p className='my-3'>Araktek is the go-to shop for pre-built pc, accessories and collectible items. With a wide range of quality products. Araktek has you covered for providing the latest and in-demand products available in our store at a reasonable price tag.</p>
         </div>
 
