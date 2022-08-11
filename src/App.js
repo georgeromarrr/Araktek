@@ -6,8 +6,9 @@ import './style/App.css';
 // pages
 import Home from "./pages/Home/Home";
 import Testt from "./pages/Testt";
-import Login from "./pages/Login/Login";
-import Register from './pages/Register/Register';
+import Login from "./pages/Login/Login"
+import Register from './pages/Register/Register'
+import Checkout from './pages/Checkout/Checkout'
 
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<Testt />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
   );
