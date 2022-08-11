@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoimg from './logo-white-text.png';
-import romarimg from './team/romar.jpg';
-import louieimg from './team/Louie.jpg'
-import johnimg from './team/John.jpg'
+import logoimg from '../img/logo-white.png';
+import romarimg from '../img/team/romar.jpg';
+import louieimg from '../img/team/Louie.jpg'
+import johnimg from '../img/team/John.jpg'
 
 
 // Logo Image
