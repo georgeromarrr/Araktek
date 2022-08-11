@@ -33,3 +33,12 @@
 .footer-item:hover {
   color: #9a9a99;
 }
+
+
+/* Login & Register */
+
+
+.login-card{
+  width: 50vh;
+}
+
