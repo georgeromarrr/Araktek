@@ -1,8 +1,4 @@
 import React from "react";
-import bg_desktop from "../img/header/bg_1920x859.jpg";
-import bg_laptop from "../img/header/bg_1200x859.jpg";
-import bg_tablet from "../img/header/bg_770x785.jpg";
-import bg_mobile from "../img/header/bg_425x785.jpg";
 
 const Header = () => {
   return (
