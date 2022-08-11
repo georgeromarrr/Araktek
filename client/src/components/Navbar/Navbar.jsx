@@ -5,7 +5,7 @@ import {BrandLogo, HeartIcon, SearchIcon, CartIcon, UserIcon, MenuIcon, HeartFil
 
 const Navbar = () => {
   return (
-    <div className='z-50  inset-x-1 top-[3px] left-[5px] right-1 bg-white rounded-t-md border-b border-black'>
+    <div className='z-50 inset-x-1 top-[3px] left-[5px] right-1 bg-white rounded-t-md border-b border-black'>
       <nav className='container py-4 mx-auto px-4 flex justify-between'>
         <Link to='/'>
           <BrandLogo/>

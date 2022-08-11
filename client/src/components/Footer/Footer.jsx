@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {FooterDetails, FooterCredits } from './FooterComponent';
 
 const Footer = () => {
