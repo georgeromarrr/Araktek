@@ -1,4 +1,4 @@
-import logoimg from './logo-black-text.png';
+import logoimg from '../img/logo-black.png';
 
 export const BrandLogo = () => {
   return (
