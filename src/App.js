@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React,{useState} from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import axios from 'axios'
 import './style/App.css';
 
@@ -24,13 +24,27 @@ axios.interceptors.request.use(function(config){
 })
 
 function App() {
+  
+  // const [user, setUser]= useState(false);
+  
+  // const isLoggedin=()=>{
+  //   if (localStorage.getItem('auth_token')){
+  //     setUser(true);
+  //     return true;
+  //     const user= true;
+  //   }else{
+  //     setUser(false);
+  //     return false;
+  //     const user= false;
+  //   }
+  // }
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Testt />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> : <Login/>} />
+        <Route path="/register" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> :<Register />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
