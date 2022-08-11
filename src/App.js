@@ -7,7 +7,7 @@ import './style/App.css';
 import Home from "./pages/Home/Home";
 import Testt from "./pages/Testt";
 import Login from "./pages/Login/Login";
-import Register from './pages/Register';
+import Register from './pages/Register/Register';
 
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
