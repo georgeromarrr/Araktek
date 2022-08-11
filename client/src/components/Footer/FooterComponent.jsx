@@ -288,7 +288,7 @@ export const FooterCredits = () => {
       </div>
 
       {/* mobile view */}
-      <div className="container mx-auto my-4 text-sm px-3 text-center desktop:hidden laptop:hidden tablet:hidden mobile:block">
+      <div className="container mx-auto my-4 text-sm px-3 text-center hidden mobile:block">
         <p>© 2022 Araktek. All Rights Reserved</p>
         <p>
           Handfully created by{" "}
