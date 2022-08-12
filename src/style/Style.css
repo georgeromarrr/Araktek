@@ -36,9 +36,14 @@
 
 
 /* Login & Register */
-
-
 .login-card{
   width: 50vh;
 }
 
+/* checkout */
+.address,.delivery, .payment, .billing{
+  width: 550px;
+}
+.paypal-text{
+  width: 510px;
+}
