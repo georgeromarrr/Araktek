@@ -61,9 +61,11 @@ export const HeaderTitle = ({ children }) => {
       <div className="relative hidden mobile:block">
         <img className="w-full" src={bg_mobile} alt="425x785" />
 
-        <div className="absolute top-[35%] w-full text-center px-3">
+        <div className="absolute top-[25%] w-full text-center px-3">
           <div className="text-white">
-            <h1 className="text-6xl font-bold pb-5">Wanna treat yo' self?</h1>
+            <h1 className="text-6xl font-bold pb-5 leading-[68px]">
+              Wanna treat yo' self?
+            </h1>
             <p className="text-sm">
               Browse and shop through our Pre-built PC, Peripherals, and
               Collectibles!
