@@ -14,6 +14,7 @@ import Cart from './pages/Cart/Cart'
 //admin
 import MasterLayout from './layouts/admin/MasterLayout'
 import Dashboard from './components/admin/Dashboard'
+import Category from './components/admin/category/Category'
 
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
@@ -40,8 +41,13 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
 
+        {/* admin routes */}
+
         <Route path="/admin" element={<MasterLayout />} > 
           <Route path='/admin/dashboard' element={<Dashboard />} />
+          <Route path='/admin/add-category' element={<Category />} />
+          
+          <Route path="/admin" element={<Navigate to="/admin/dashboard" /> } />
         </Route>
       </Routes>
     </div>

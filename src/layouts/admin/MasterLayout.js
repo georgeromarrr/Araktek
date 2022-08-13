@@ -1,3 +1,5 @@
+import { Outlet } from 'react-router-dom'
+
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
@@ -21,7 +23,7 @@ const MasterLayout = () => {
             <div id="layoutSidenav_content">
                 <main>
                     
-                    {/* <Outlet /> */}
+                    <Outlet />
                     {/* <Routes>
                    
                         <Route path="/admin/*" element={<Navigate to="/admin/dashboard" /> } />
