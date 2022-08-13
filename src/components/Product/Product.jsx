@@ -36,6 +36,13 @@ const Product = (props) => {
           >
             ADD TO BAG
           </button>
+
+          {/* new, sale, last item */}
+          <span
+            className="bg-black text-white top-1 left-0 object-center py-1 px-5 absolute"
+          >
+            SALE
+          </span>
         </div>
         <div className="mt-4 flex-col mx-1">
           {/* title */}
