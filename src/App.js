@@ -10,6 +10,11 @@ import Login from "./pages/Login/Login"
 import Register from './pages/Register/Register'
 import Checkout from './pages/Checkout/Checkout'
 import Cart from './pages/Cart/Cart'
+
+//admin
+import MasterLayout from './layouts/admin/MasterLayout'
+import Dashboard from './components/admin/Dashboard'
+
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
 axios.defaults.headers.post['Content-Type']='application/json';
@@ -34,6 +39,10 @@ function App() {
         <Route path="/register" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> :<Register />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
+
+        <Route path="/admin" element={<MasterLayout />} > 
+          <Route path='/admin/dashboard' element={<Dashboard />} />
+        </Route>
       </Routes>
     </div>
   );
