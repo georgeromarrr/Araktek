@@ -3,12 +3,12 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import {BrandLogo} from '../../components/Navbar/NavbarComponents'
 import product from './laptop1.jpg'
+import { Link, useNavigate } from "react-router-dom";
 const Checkout = () => {
   return (
     <>
-    <Navbar/>
         <div className='container mx-auto'>
-            <div className='flex justify-center mt-10'><BrandLogo/></div>
+            <Link to='/'><div className='flex justify-center mt-10'><BrandLogo/></div></Link>
             <div className="flex justify-between bg-black py-2 laptop:w-screen">
                 <span className='text-white px-5'>Order Summary</span>
                 <div className=''>
@@ -114,10 +114,10 @@ const Checkout = () => {
                         <div className='paypal-text mobile:w-full ml-2'>
                             <span className='text-xs'>Click the button below to be directed to the Paypal website to make this payment.</span>
                         </div>
-                        <div className='pay-text my-5 mobile:w-full ml-2'>
+                        <div className='pay-text my-5 mobile:w-full'>
                             <span className='text-xs'>By clicking Pay and Place Order, you agree to purchase your item(s) from Arak-e as merchant of record for this transaction, on Arak-e's <span className='text-sky-500'>Terms and Conditions</span> and <span className='text-sky-500'>Privacy Policy.</span> Arak-e is a national fulfilment service provider to Araktek </span>
                         </div>  
-                        <button type="button" class="focus:outline-none text-white bg-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900 mobile: w-full py-3.5">Pay and Place Order</button>
+                        <button type="button" class="mobile:w-full focus:outline-none text-white bg-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900 mobile: w-52 py-3.5">Pay and Place Order</button>
 
                     </div>
 
@@ -141,8 +141,12 @@ const Checkout = () => {
                                 <span className='font-semibold'>₱0.00</span>
                             </div>
                             <hr />
-                            <div className="flex justify-between ml-3 py-5">
-                                <span className='text-l font-bold'>Total For Your Order</span>
+                            <div className="flex justify-between ml-3 py-10">
+                                <div className='flex flex-col'>
+                                    <span className='text-l font-bold'>Total For Your Order</span>
+                                    <span className='text-xs mt-10'>No duties and taxes are expected to apply to this order</span>
+                                </div>
+                                
                                 <span className='font-semibold'>₱20,000.00</span>
                             </div>
                         </div>
@@ -150,10 +154,25 @@ const Checkout = () => {
                     </div>
 
                 </div>
+                <div className="footer">
+                    <div className="w-full py-2 bg-black mb-10">
+                        <div className='flex justify-center'>
+                            <span className='text-white text-xs font-semibold cursor-pointer'>Contact Us</span>
+                            <span className='text-white text-xs font-semibold mx-2'>|</span>
+                            <span className='text-white text-xs font-semibold cursor-pointer'>Help</span>
+                            <span className='text-white text-xs font-semibold mx-2'>|</span>
+                            <span className='text-white text-xs font-semibold cursor-pointer'>Terms & Conditions</span>
+                            <span className='text-white text-xs font-semibold mx-2'>|</span>
+                            <span className='text-white text-xs font-semibold cursor-pointer'>Privacy Policy</span>
+                            <span className='text-white text-xs font-semibold mx-2'>|</span>
+                        </div>
+
+                    </div>
+                </div>
             </form>
+
         </div>
 
-    <Footer/>
     </>
   )
 }

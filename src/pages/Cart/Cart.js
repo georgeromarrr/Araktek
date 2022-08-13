@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import laptop from '../Checkout/laptop1.jpg'
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import { Link, useNavigate } from "react-router-dom";
 
 // Icons
 export const TruckIcon=()=>{
@@ -105,8 +105,8 @@ const Cart = () => {
                         
                     </div>
                         
-                    <div className="summary w-96 ml-10 mobile:mt-10 mobile:ml-3 tablet:w-96, mt-10">
-                        <div className='mb-7'>
+                    <div className="summary w-5/6 ml-10 mobile:mt-10 mobile:ml-7 tablet:w-96">
+                        <div className='mb-7 mobile:flex mobile:justify-center'>
                             <span className="text-2xl font-semibold">Order Summary</span>
                         </div>
                         <div className="summary-body bg-gray-100 h-42 pb-3 px-2">
@@ -120,7 +120,7 @@ const Cart = () => {
                                 </div>
 
                                 <div className='flex justify-center mt-5'>
-                                    <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 w-80">Proceed to Checkout</button>
+                                    <Link to='/checkout'><button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 w-80">Proceed to Checkout</button></Link>
                                 </div>
                         </div>
                         <div className='flex justify-center mt-5'>
