@@ -10,7 +10,8 @@ const Checkout = () => {
         <div className='container mx-auto'>
             <Link to='/'><div className='flex justify-center mt-10'><BrandLogo/></div></Link>
             <div className="flex justify-between bg-black py-2 laptop:w-screen">
-                <span className='text-white px-5'>Order Summary</span>
+            
+                <span className='text-white mx-3'>Order Summary</span>
                 <div className=''>
                     <span className='text-white mx-7 mobile:hidden'>Quantity</span>
                     <span className='text-white mx-7 mobile:hidden'>Price</span>
@@ -111,10 +112,10 @@ const Checkout = () => {
                         <div className='mx-1'>
                     <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" border="0" alt="PayPal Logo"/>
                         </div>
-                        <div className='paypal-text mobile:w-full ml-2'>
+                        <div className='paypal-text mobile:w-full mobile:ml-2'>
                             <span className='text-xs'>Click the button below to be directed to the Paypal website to make this payment.</span>
                         </div>
-                        <div className='pay-text my-5 mobile:w-full'>
+                        <div className='pay-text my-5 mobile:w-full mobile:ml-2'>
                             <span className='text-xs'>By clicking Pay and Place Order, you agree to purchase your item(s) from Arak-e as merchant of record for this transaction, on Arak-e's <span className='text-sky-500'>Terms and Conditions</span> and <span className='text-sky-500'>Privacy Policy.</span> Arak-e is a national fulfilment service provider to Araktek </span>
                         </div>  
                         <button type="button" class="mobile:w-full focus:outline-none text-white bg-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900 mobile: w-52 py-3.5">Pay and Place Order</button>
@@ -144,7 +145,7 @@ const Checkout = () => {
                             <div className="flex justify-between ml-3 py-10">
                                 <div className='flex flex-col'>
                                     <span className='text-l font-bold'>Total For Your Order</span>
-                                    <span className='text-xs mt-10'>No duties and taxes are expected to apply to this order</span>
+                                    <span className='text-xs mt-10 text-gray-400'>No duties and taxes are expected to apply to this order</span>
                                 </div>
                                 
                                 <span className='font-semibold'>₱20,000.00</span>
