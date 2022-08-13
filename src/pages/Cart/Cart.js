@@ -54,6 +54,8 @@ export const RemoveIcon=()=>{
 
 
 
+
+
 const Cart = () => {
 
     const [count, setCount]= useState(1);
@@ -97,7 +99,7 @@ const Cart = () => {
                             </div>
                             <div className="flex flex-col mobile:justify-end">
                                 <span className='text-l font-semibold mobile:ml-3'>₱14,000.00</span>
-                                <div className='text-end mt-5 mobile:hidden'><DeleteIcon className='cursor-pointer'/></div>
+                                <div className='text-end mt-5 mobile:hidden'><DeleteIcon sx={{color:"#aa1515"}} className='cursor-pointer'/></div>
                             </div>
                         </div>
                         
@@ -112,7 +114,7 @@ const Cart = () => {
                         <div className="summary-body bg-gray-100 h-42 pb-3 px-2">
                                 <div className="flex justify-between pt-5">
                                     <span>Subtotal</span>
-                                    <span className='text-orange-700 font-medium'>P14,000.00</span>
+                                    <span className='text-money font-semibold'>P14,000.00</span>
                                 </div>
                                 <div className="flex justify-between mt-5 mb-7">
                                     <span>Shipping</span>

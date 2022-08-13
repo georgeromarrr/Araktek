@@ -49,7 +49,10 @@
 .pay-text {
   width: 510px;
 }
+.text-money{
+  color: #d28149;
 
+}
 .text-ellipsis-1 {
   overflow: hidden;
   display: -webkit-box;

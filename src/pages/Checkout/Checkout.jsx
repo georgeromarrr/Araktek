@@ -9,27 +9,31 @@ const Checkout = () => {
     <>
         <div className='container mx-auto'>
             <Link to='/'><div className='flex justify-center mt-10'><BrandLogo/></div></Link>
-            <div className="flex justify-between bg-black py-2 laptop:w-screen">
-            
+            <div className="flex justify-between bg-black py-2 laptop:w-screen">      
                 <span className='text-white mx-3'>Order Summary</span>
-                <div className=''>
-                    <span className='text-white mx-7 mobile:hidden'>Quantity</span>
-                    <span className='text-white mx-7 mobile:hidden'>Price</span>
-                </div>
-                <span className='text-white mx-5 mobile:hidden'>Total</span>
+                <span className='text-white mx-5 mobile:hidden'>Price</span>
             </div>
 
-            <div className="flex justify-evenly py-2 my-20 laptop:w-screen">
-                {/* <div className='flex'>
-                    <img src={product} width='150px' height='150px' alt="product"/>
-                    <span className='truncate w-82'>Lenovo Legion 5 15ARH7H 82RD001APH 15.6" AMD Ryzen 7 6800H | NVIDIA GeForce RTX 3060 | 16GB DDR5-4800 | 512GB SSD [Storm Grey]</span>
+            <div className="mt-4 flex justify-between mobile:flex-col">
+                <div className="cart-items w-full mobile:w-96">
+                    <div className='flex flex-between'>
+                        <div className="cart-img">
+                            <img src={product} width='100px' height='100px' alt="product"/>
+                        </div>
+                        <div className="cart-details ml-4">
+                            <span className='text-ellipsis-1 w-4/6 mobile:w-52'>Lenovo Legion 5 15ARH7H 82RD001APH 15.6" AMD Ryzen 7 6800H | NVIDIA GeForce RTX 3060 | 16GB DDR5-4800 | 512GB SSD [Storm Grey]</span>
+                            <span>Qty: 1</span>                                                    
+                        </div>
+                    </div>
+                            
                 </div>
-                <div className=''>
-                    <span className='mx-7 mobile:hidden'>Quantity</span>
-                    <span className='mx-7 mobile:hidden'>Price</span>
+                <div className="flex flex-col mobile:justify-end">
+                    <span className='text-l font-semibold mobile:ml-3'>₱14,000.00</span>
                 </div>
-                <span className='mx-5 mobile:hidden'>Total</span> */}
             </div>
+            <hr className='mt-5'/>
+            <div className="flex justify-end my-4"><span className='font-semibold'>Total: ₱28,000.00</span></div>
+
             {/* BILLING DETAILS */}
             <form>
                 <div className="bill-details flex justify-between mobile:flex-col laptop:flex-col">
