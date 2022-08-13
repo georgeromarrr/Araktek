@@ -2,10 +2,13 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { HeaderTitle } from "../../components/Header/Header";
+import Productdata from "../../components/Product/ProductData";
+import Product from "../../components/Product/Product";
+import { Link, Route } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <HeaderTitle>
         <button
@@ -16,8 +19,27 @@ const Home = () => {
         </button>
       </HeaderTitle>
 
+      <div className="w-11/12 mx-auto mb-40">
+        <h1 className="text-center pt-20 tracking-[0.50rem] font-dge_bold text-4xl">
+          PRODUCTS
+        </h1>
+        <div className="mt-6 grid grid-cols-4 gap-y-12 gap-x-12 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
+          {Productdata.map((item) => (
+            <Product
+              key={item.id}
+              title={item.title}
+              price={item.price}
+              imageName={item.imageName}
+              ratings={item.ratings}
+              reviewNum={item.reviewNum}
+              item={item}
+            />
+          ))}
+        </div>
+      </div>
+
       <Footer />
-    </div>
+    </>
   );
 };
 

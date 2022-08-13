@@ -34,16 +34,26 @@
   color: #9a9a99;
 }
 
-
 /* Login & Register */
-.login-card{
+.login-card {
   width: 50vh;
 }
 
 /* checkout */
-.address,.delivery, .payment, .billing{
+.address,
+.delivery,
+.payment,
+.billing {
   width: 550px;
 }
-.paypal-text{
+.paypal-text {
   width: 510px;
+}
+
+/* Product*/
+.text-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
