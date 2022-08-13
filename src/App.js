@@ -9,7 +9,7 @@ import Testt from "./pages/Testt";
 import Login from "./pages/Login/Login"
 import Register from './pages/Register/Register'
 import Checkout from './pages/Checkout/Checkout'
-
+import Cart from './pages/Cart/Cart'
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
 axios.defaults.headers.post['Content-Type']='application/json';
@@ -25,19 +25,6 @@ axios.interceptors.request.use(function(config){
 
 function App() {
   
-  // const [user, setUser]= useState(false);
-  
-  // const isLoggedin=()=>{
-  //   if (localStorage.getItem('auth_token')){
-  //     setUser(true);
-  //     return true;
-  //     const user= true;
-  //   }else{
-  //     setUser(false);
-  //     return false;
-  //     const user= false;
-  //   }
-  // }
   return (
     <div>
       <Routes>
@@ -46,6 +33,7 @@ function App() {
         <Route path="/login" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> : <Login/>} />
         <Route path="/register" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> :<Register />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );
