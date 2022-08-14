@@ -68,13 +68,13 @@ const Navbar = () => {
           <Link className="nav-items" to="/">
             PRODUCT
           </Link>
-          <Link className="nav-items" to="/">
+          <Link className="nav-items" to="/pc">
             PC
           </Link>
-          <Link className="nav-items" to="/about">
+          <Link className="nav-items" to="/peripherals">
             PERIPHERALS
           </Link>
-          <Link className="nav-items" to="/">
+          <Link className="nav-items" to="/collectibles">
             COLLECTIBLES
           </Link>
         </div>
