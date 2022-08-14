@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import Footer from '../../components/Footer/Footer'
-import laptop from '../Checkout/laptop1.jpg'
+import Navbar from '../../../components/user/Navbar/Navbar'
+import Footer from '../../../components/user/Footer/Footer'
+import laptop from '../../user/Checkout/laptop1.jpg'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Link, useNavigate } from "react-router-dom";
 

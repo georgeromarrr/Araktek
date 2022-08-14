@@ -4,17 +4,12 @@ import axios from 'axios'
 import './style/App.css';
 
 // pages
-import Home from "./pages/Home/Home";
+import Home from "./pages/user/Home/Home";
 import Testt from "./pages/Testt";
-import Login from "./pages/Login/Login"
-import Register from './pages/Register/Register'
-import Checkout from './pages/Checkout/Checkout'
-import Cart from './pages/Cart/Cart'
-
-//admin
-import MasterLayout from './layouts/admin/MasterLayout'
-import Dashboard from './components/admin/Dashboard'
-import Category from './components/admin/category/Category'
+import Login from "./pages/user/Login/Login";
+import Register from './pages/user/Register/Register';
+import Checkout from './pages/user/Checkout/Checkout';
+import Cart from './pages/user/Cart/Cart';
 
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
@@ -42,13 +37,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
         {/* admin routes */}
-
-        <Route path="/admin" element={<MasterLayout />} > 
-          <Route path='/admin/dashboard' element={<Dashboard />} />
-          <Route path='/admin/add-category' element={<Category />} />
-          
-          <Route path="/admin" element={<Navigate to="/admin/dashboard" /> } />
-        </Route>
+        
       </Routes>
     </div>
   );

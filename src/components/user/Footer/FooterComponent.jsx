@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logoimg from "../img/logo-white.png";
-import romarimg from "../img/team/romar.jpg";
-import louieimg from "../img/team/Louie.jpg";
-import johnimg from "../img/team/John.jpg";
+import logoimg from "../../user/assets/img/logo-white.png";
+import romarimg from "../../user/assets/img/team/romar.jpg";
+import louieimg from "../../user/assets/img/team/Louie.jpg";
+import johnimg from "../../user/assets/img/team/John.jpg";
 
 // Logo Image
 export const FooterLogo = () => {
