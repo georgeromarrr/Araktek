@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import { HeaderTitle } from "../../components/Header/Header";
-import Productdata from "../../components/Product/ProductData";
-import Product from "../../components/Product/Product";
+import Navbar from "../../../components/user/Navbar/Navbar";
+import Footer from "../../../components/user/Footer/Footer";
+import { HeaderTitle } from "../../../components/user/Header/Header";
+import Productdata from "../../../components/user/Product/ProductData";
+import Product from "../../../components/user/Product/Product";
 import { Link, Route } from "react-router-dom";
 
 const Home = () => {
