@@ -10,7 +10,8 @@ import Login from "./pages/user/Login/Login";
 import Register from './pages/user/Register/Register';
 import Checkout from './pages/user/Checkout/Checkout';
 import Cart from './pages/user/Cart/Cart';
-
+import Wishlist from './pages/user/Wishlist/Wishlist'
+import Account from './pages/user/Account/Account'
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
 axios.defaults.headers.post['Content-Type']='application/json';
@@ -31,10 +32,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Testt />} />
-        <Route path="/login" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> : <Login/>} />
+        <Route path="/login" element={localStorage.getItem('auth_token') ? <Navigate to='/account'/> : <Login/>} />
         <Route path="/register" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> :<Register />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/account" element={<Account />} />
 
         {/* admin routes */}
         

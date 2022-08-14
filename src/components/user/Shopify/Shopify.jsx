@@ -1,99 +1,4 @@
-import React, {useState} from 'react'
-import Navbar from '../../../components/user/Navbar/Navbar'
-import Footer from '../../../components/user/Footer/Footer'
-import Shopify from '../../../components/user/Shopify/Shopify'
-import laptop from '../../user/Checkout/laptop1.jpg'
-import DeleteIcon from '@mui/icons-material/Delete';
-import { Link, useNavigate } from "react-router-dom";
-
-const Cart = () => {
-
-    const [count, setCount]= useState(1);
-
-    const handleIncrement=()=>{
-        setCount(prevCount => prevCount + 1);
-
-    }
-    const handleDecrement=()=>{
-        setCount(prevCount => prevCount - 1);
-    }
-
-  return (
-    <>
-        <Navbar/>
-            <div className='container mx-auto mt-24'>
-                <div className="flex justify-between mobile:flex-col tablet:flex-col">  
-                    <div className="cart w-screen">
-                        <div className="cart-head">
-                            <span className='text-2xl'>My Bag</span>
-                        </div>
-                        <hr className='mt-7' />
-
-                        {/* CART BODY TO BE MAPPED */}
-                        <div className="mt-4 flex justify-between mobile:flex-col">
-                            <div className="cart-items w-full mobile:w-96">
-                                <div className='flex flex-between'>
-                                    <div className="cart-img">
-                                        <img src={laptop} width='100px' height='100px' alt="product"/>
-                                    </div>
-                                    <div className="cart-details ml-4">
-                                        <span className='text-ellipsis-1 w-96 mobile:w-52'>Lenovo Legion 5 15ARH7H 82RD001APH 15.6" AMD Ryzen 7 6800H | NVIDIA GeForce RTX 3060 | 16GB DDR5-4800 | 512GB SSD [Storm Grey]</span>
-                                        <div className="wrapper mt-4 h-5 w-24 flex items-center justify-center bg-white rounded-sm border-gray-400">
-                                                <button className='cursor-pointer w-full text-center text-s font-semibold' onClick={handleDecrement}>-</button>
-                                                <span className='num cursor-default w-full text-center text-s font-semibold'>{count}</span>
-                                                <button className='cursor-pointer w-full text-center text-s font-semibold' onClick={handleIncrement}>+</button>
-                                            </div>
-                                    </div>
-                                </div>
-                            
-                            </div>
-                            <div className="flex flex-col mobile:justify-end">
-                                <span className='text-l font-semibold mobile:ml-3'>₱14,000.00</span>
-                                <div className='text-end mt-5 mobile:hidden'><DeleteIcon sx={{color:"#aa1515"}} className='cursor-pointer'/></div>
-                            </div>
-                        </div>
-                        
-                        {/* END */}
-                        
-                    </div>
-                    {/* Order Summary */}
-                    <div className="summary w-5/6 ml-10 mobile:mt-10 mobile:ml-7 tablet:w-96">
-                        <div className='mb-7 mobile:flex mobile:justify-center'>
-                            <span className="text-2xl font-semibold">Order Summary</span>
-                        </div>
-                        <div className="summary-body bg-gray-100 h-42 pb-3 px-2">
-                                <div className="flex justify-between pt-5">
-                                    <span>Subtotal</span>
-                                    <span className='text-money font-semibold'>P14,000.00</span>
-                                </div>
-                                <div className="flex justify-between mt-5 mb-7">
-                                    <span>Shipping</span>
-                                    <span>Calculated at next step</span>
-                                </div>
-
-                                <div className='flex justify-center mt-5'>
-                                    <Link to='/checkout'><button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 w-80">Proceed to Checkout</button></Link>
-                                </div>
-                        </div>
-                        <div className='flex justify-center mt-5'>
-                            <Link to='/wishlist'><span className='underline text-xs cursor-pointer'>View my wishlist</span></Link>
-
-                        </div>
-                        
-
-                    </div>
-                </div>
-            </div>
-
-        <Shopify/>
-
-            
-        <Footer/>
-    </>
-  )
-}
-
-export default Cart
+import React from 'react'
 
 
 // Icons
@@ -107,7 +12,6 @@ export const TruckIcon=()=>{
         </svg>
     );
 };
-
 export const GiftIcon=()=>{
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="50" viewBox="0 0 38 50" wz_dt_ref="true">
@@ -127,19 +31,32 @@ export const ReturnIcon=()=>{
     );
 };
 
-export const AddIcon=()=>{
-    return(
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-        </svg>
-    )
-};
 
-export const RemoveIcon=()=>{
-    return(
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
-        </svg>
-    )
+
+const Shopify = () => {
     
-};
+  return (
+    <div className='container mx-auto'>
+        <div className="flex justify-evenly mt-52">
+        <div className='flex flex-col'>       
+            <div className='flex justify-center'><TruckIcon/></div>
+            <span className='my-5 text-s text-center'>Free Shipping</span>
+            <span className='text-xs w-32 text-center'>For the PH, UK, US, Canada & Australia (minimum spend)</span>
+        </div>
+        <div className='flex flex-col'>       
+        <div className='flex justify-center'><GiftIcon/></div>
+            <span className='my-5 text-s text-center'>Summer Sale</span>
+            <span className='text-xs w-32 text-center'>Now up to 50% off</span>
+        </div>
+        <div className='flex flex-col'>       
+        <div className='flex justify-center'><ReturnIcon/></div>
+            <span className='my-5 text-s text-center'>Free Returns</span>
+            <span className='text-xs w-32 text-center'>For the PH, UK, US, Canada & Australia. Rest of World. ₱1,100.00</span>
+        </div>
+    </div>
+    </div>
+    
+  )
+}
+
+export default Shopify

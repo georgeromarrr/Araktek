@@ -5,7 +5,7 @@ import { HeaderTitle } from "../../../components/user/Header/Header";
 import Productdata from "../../../components/user/Product/ProductData";
 import Product from "../../../components/user/Product/Product";
 import { Link, Route } from "react-router-dom";
-
+import Shopify from "../../../components/user/Shopify/Shopify";
 const Home = () => {
   return (
     <>
@@ -37,7 +37,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-
+      <Shopify/>    
       <Footer />
     </>
   );
