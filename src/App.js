@@ -12,9 +12,8 @@ import Checkout from './pages/user/Checkout/Checkout';
 import Cart from './pages/user/Cart/Cart';
 import Wishlist from './pages/user/Wishlist/Wishlist'
 import Account from './pages/user/Account/Account'
-import Collectibles from './pages/user/Products/Collectibles'
-import Pc from './pages/user/Products/Pc'
-import Peripherals from './pages/user/Products/Peripherals'
+import ViewProduct from './pages/user/Products/ViewProduct'
+import ProductDetail from './pages/user/ProductDetail/ProductDetail'
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
 axios.defaults.headers.post['Content-Type']='application/json';
@@ -42,9 +41,9 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/account" element={<Account />} />
         
-        <Route path="/collectibles" element={<Collectibles />} />
-        <Route path="/pc" element={<Pc />} />
-        <Route path="/peripherals" element={<Peripherals />} />
+        <Route path="/:slug" element={<ViewProduct />} />
+        <Route path="/:slug/:product" element={<ProductDetail />} />
+
         {/* admin routes */}
         
       </Routes>

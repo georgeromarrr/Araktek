@@ -13,11 +13,13 @@ const Product = (props) => {
     >
       <div className="group relative" key={props.id}>
         <div className="w-full h-96 bg-white aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 relative">
+        <Link to={`/${props.categs}/${props.prods}`}>
           <img
             src={props.imageName}
             alt="img display"
             className="w-full h-full object-center object-contain"
           />
+          </Link>
 
           {/* favorites */}
           <button
@@ -54,16 +56,16 @@ const Product = (props) => {
           <div className="flex flex-row justify-between mt-2 mb-4 gap-4">
             {/* price */}
             <div className="flex flex-row">
-              <p className="text-sm">₱ {props.price.toLocaleString()}</p>
-              <span className="text-sm mx-1"> - </span>
-              <span className="text-sm">₱ {props.price.toLocaleString()}</span>
+              <p className="text-sm">₱ {parseInt(props.sellprice).toLocaleString()}</p>
+              <span className="text-sm mx-1">   </span>
+              <span className="text-sm"><s>₱ {parseInt(props.origprice).toLocaleString()}</s></span>
             </div>
 
             {/* rating */}
             <div className="flex items-center">
               <Rating
                 name="half-rating-read"
-                defaultValue={props.ratings}
+                defaultValue={0}
                 precision={0.5}
                 readOnly
                 sx={{
@@ -74,7 +76,7 @@ const Product = (props) => {
               />
 
               {/* rating number */}
-              <span className="text-sm">({props.reviewNum})</span>
+              <span className="text-sm">({0})</span>
             </div>
           </div>
         </div>

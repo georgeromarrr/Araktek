@@ -1,12 +1,57 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "../../../components/user/Navbar/Navbar";
 import Footer from "../../../components/user/Footer/Footer";
 import { HeaderTitle } from "../../../components/user/Header/Header";
-import Productdata from "../../../components/user/Product/ProductData";
 import Product from "../../../components/user/Product/Product";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, useNavigate } from "react-router-dom";
 import Shopify from "../../../components/user/Shopify/Shopify";
+import axios from 'axios'
 const Home = () => {
+  let navigate= useNavigate();
+  const [loading, setLoading]= useState(true);
+  const [products, setProducts]= useState([]);
+
+  useEffect(()=>{
+ 
+    axios.get(`/api/allproduct`).then(res=>{
+        if(res.data.status === 200){
+          console.log(res.data.products)
+          setProducts(res.data.products)
+          setLoading(false);
+        }
+    });
+
+}, []);
+
+  var showAll= '';
+
+  if(loading){
+    return (
+      <div className="flex justify-center items-center">
+      <h1 className="text-2xl">Loading all products...</h1>
+      </div>
+    )
+   
+
+  }else{
+    showAll= products.map((item, idx) => {
+      return(
+        <Product
+        key={idx}
+        imageName={`http://127.0.0.1:8000/${item.image}`}
+        ratings={0}
+        reviewNum={0}
+        title={item.name}
+        origprice={item.original_price}
+        sellprice={item.selling_price}
+        
+    />
+      )
+    })
+  }
+
+
+
   return (
     <>
       <Navbar />
@@ -24,17 +69,7 @@ const Home = () => {
           PRODUCTS
         </h1>
         <div className="mt-6 grid grid-cols-4 gap-y-12 gap-x-12 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
-          {Productdata.map((item) => (
-            <Product
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              imageName={item.imageName}
-              ratings={item.ratings}
-              reviewNum={item.reviewNum}
-              item={item}
-            />
-          ))}
+          {showAll}
         </div>
       </div>
       <Shopify/>    
