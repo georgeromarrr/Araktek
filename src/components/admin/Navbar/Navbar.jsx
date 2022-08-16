@@ -19,13 +19,13 @@ const Navbar = () => {
   });
 
   return (
-    <div className="border-b border-gray-300 shadow-sm fixed inset-x-0 z-50 bg-white dark:bg-stone-900">
+    <div className="border-b border-black shadow-sm inset-x-0 bg-white dark:bg-stone-900 w-full">
       <nav className="py-4 mx-6 flex justify-between">
         <Link to="/">
           <BrandLogo />
         </Link>
 
-        <div className="flex self-center items-center">
+        <div className="flex self-center items-center gap-x-1">
           <p className="dark:text-white">Welcome</p>
           <div className="relative">
             <button

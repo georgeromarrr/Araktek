@@ -5,8 +5,11 @@ import Navbar from "../../../components/admin/Navbar/Navbar";
 const Home = () => {
   return (
     <>
-      <div>
-        {/* <Navbar /> */}
+      <div className="flex flex-row">
+        <div className="order-2 w-full">
+          <Navbar />
+          <>body</>
+        </div>
         <Sidebar />
       </div>
     </>
