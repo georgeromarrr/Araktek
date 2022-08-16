@@ -9,19 +9,20 @@ import axios from 'axios'
 const Home = () => {
   let navigate= useNavigate();
   const [loading, setLoading]= useState(true);
-  const [products, setProducts]= useState([]);
+  const [product, setProduct]= useState([]);
 
   useEffect(()=>{
  
     axios.get(`/api/allproduct`).then(res=>{
         if(res.data.status === 200){
           console.log(res.data.products)
-          setProducts(res.data.products)
+          setProduct(res.data.products)
           setLoading(false);
         }
     });
 
 }, []);
+
 
   var showAll= '';
 
@@ -34,10 +35,11 @@ const Home = () => {
    
 
   }else{
-    showAll= products.map((item, idx) => {
+    showAll= product.map((item, idx) => {
       return(
         <Product
         key={idx}
+        idx={idx}
         imageName={`http://127.0.0.1:8000/${item.image}`}
         ratings={item.rating}
         reviewNum={item.review}

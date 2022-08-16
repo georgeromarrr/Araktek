@@ -50,7 +50,7 @@ const Navbar = () => {
   } else {
     AuthButtons = (
       <div onClick={logoutSubmit}>
-        <Link className="nav-items" to="">
+        <Link className="nav-items" to="/login">
           <UserRegIcon />
         </Link>
       </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
           <Link className="nav-items" to="/">
             <SearchIcon />
           </Link>
-          <Link className="nav-items" to="/">
+          <Link className="nav-items" to="/wishlist">
             <HeartIcon />
           </Link>
           <Link className="nav-items" to="/cart">
@@ -93,8 +93,8 @@ const Navbar = () => {
             className="nav-items laptop:hidden tablet:hidden mobile:hidden"
             to="/login"
           >
-            {/* {AuthButtons} */}
-            <UserIcon />
+            {AuthButtons}
+            
           </Link>
           <button className="desktop:hidden laptop:block">
             <MenuIcon />

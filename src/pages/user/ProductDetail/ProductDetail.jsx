@@ -3,6 +3,7 @@ import Navbar from '../../../components/user/Navbar/Navbar'
 import Footer from '../../../components/user/Footer/Footer'
 import axios from 'axios'
 import {Link, useNavigate, useParams} from 'react-router-dom'
+import swal from 'sweetalert';
 const ProductDetail = () => {
     let navigate= useNavigate();
 
@@ -25,14 +26,14 @@ const ProductDetail = () => {
                 if(res.data.status === 200){
                     setProduct(res.data.product);
                     setLoading(false);
+                    console.log(res.data.product)
                 }
-                else if(res.data.status === 404){
+                else if(res.data.status === 400){
                     navigate('/');
-                    // swal("Warning",res.data.message, "error")
+                    swal("Warning",res.data.message, "error")
                 }
             }
         });
-
         return ()=>{
             isMounted= false
         } 
@@ -46,21 +47,6 @@ const ProductDetail = () => {
         return <h4>Loading produicts...</h4>
     }
     else{
-        var showProduct= '';
-        showProduct= product.map((item, idx)=>{
-            return(
-                <div className="col-md-3" key={idx}>
-                    <div className="card">
-                    <Link to={`${item.slug}`}>
-                        <img src={`http://127.0.0.1:8000/${item.image}`} width='100px' height='100px' alt={item.name} srcset="" />
-                    </Link>
-                        <div className="card-body">
-                            <h5>{item.name}</h5>
-                        </div>
-                    </div>
-                </div>
-            )
-        });
 
     }
 

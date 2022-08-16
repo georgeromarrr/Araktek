@@ -1,9 +1,37 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import swal from "sweetalert";
 
 const Product = (props) => {
   const [isHover, setHover] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  
+  const submitAddtocart=(e)=>{
+    e.preventDefault();
+    console.log(props.title);
+    console.log(props.idx);
+    
+    const data = {
+      product_id: props.idx,
+      qty: quantity,
+    }
+    // console.log(data);
+    axios.post(`/api/addcart`, data).then(res=>{
+      if(res.data.status === 201){
+        swal("Warning", res.data.message, "warning");
+        console.log(res.data.message);
+      }else if(res.data.status === 409){
+        swal("Warning", res.data.message, "warning");
+        console.log(res.data.message);
+      }else if(res.data.status === 401){
+        swal("Warning", res.data.message, "error");
+        console.log(res.data.message);
+      }
+
+    });
+  }
 
   return (
     <div
@@ -32,6 +60,7 @@ const Product = (props) => {
 
           {/* add to cart */}
           <button
+            onClick={submitAddtocart}
             className={`bg-black text-white inset-x-1 bottom-1 object-center py-2 px-12 absolute ${
               isHover ? "" : "hidden"
             }`}

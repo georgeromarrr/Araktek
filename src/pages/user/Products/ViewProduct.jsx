@@ -5,13 +5,14 @@ import Footer from '../../../components/user/Footer/Footer'
 import { useNavigate } from 'react-router-dom';
 import Product from '../../../components/user/Product/Product'
 import { Link, useParams } from 'react-router-dom';
+import swal from 'sweetalert';
 const ViewProduct = () => {
 
     let navigate= useNavigate();
     const {slug} = useParams();
 
     const [loading, setLoading]= useState(true);
-    const [product, setProduct]= useState([]);
+    const [products, setProduct]= useState([]);
     const [category, setCategory]= useState([]);
 
     useEffect(()=>{
@@ -23,9 +24,11 @@ const ViewProduct = () => {
                     setProduct(res.data.product_data.product);
                     setCategory(res.data.product_data.category);
                     setLoading(false);
+                    console.log(res.data.product_data.product)
                 }
                 else if(res.data.status === 400){
-                    // swal("warning",res.data.message, "");
+                    swal("warning",res.data.message, "");
+
                 }
 
                 else if(res.data.status === 404){
@@ -50,10 +53,12 @@ const ViewProduct = () => {
     else{
         var showProduct= '';
 
-        showProduct= product.map((item, id)=>{
+        showProduct= products.map((item, id)=>{
             return(
                 <Product
                     key={id}
+
+                    brand={item.brand}
                     imageName={`http://127.0.0.1:8000/${item.image}`}
                     ratings={0}
                     reviewNum={0}
@@ -75,9 +80,12 @@ const ViewProduct = () => {
         <h1 className="text-center pt-20 tracking-[0.50rem] font-dge_bold text-4xl">
           {category.name}
         </h1>
-        <div className="mt-6 grid grid-cols-4 gap-y-12 gap-x-12 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
-          {showProduct}
+        <div className="container mx-auto">
+            <div className="mt-6 grid grid-cols-4 gap-y-12 gap-x-12 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
+              {showProduct}
+            </div>
         </div>
+       
       </div>
       <Footer/>
     </div>
