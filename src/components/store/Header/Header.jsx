@@ -1,7 +1,7 @@
-import bg_desktop from "../assets/img/header/bg_1920x859.jpg";
-import bg_laptop from "../assets/img/header/bg_1200x859.jpg";
-import bg_tablet from "../assets/img/header/bg_770x785.jpg";
-import bg_mobile from "../assets/img/header/bg_425x785.jpg";
+import bg_desktop from "../../assets/img/header/bg_1920x859.jpg";
+import bg_laptop from "../../assets/img/header/bg_1200x859.jpg";
+import bg_tablet from "../../assets/img/header/bg_770x785.jpg";
+import bg_mobile from "../../assets/img/header/bg_425x785.jpg";
 
 export const HeaderTitle = ({ children }) => {
   return (

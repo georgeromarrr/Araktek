@@ -3,13 +3,19 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import axios from 'axios'
 import './style/App.css';
 
-// pages
-import Home from "./pages/user/Home/Home";
+// user pages
+import Home from "./pages/store/Home/Home";
 import Testt from "./pages/Testt";
-import Login from "./pages/user/Login/Login";
-import Register from './pages/user/Register/Register';
-import Checkout from './pages/user/Checkout/Checkout';
-import Cart from './pages/user/Cart/Cart';
+import Login from "./pages/store/Login/Login";
+import Register from './pages/store/Register/Register';
+import Checkout from './pages/store/Checkout/Checkout';
+import Cart from './pages/store/Cart/Cart';
+
+
+// admin pages
+import AdminLogin from "./pages/admin/Login/Login";
+import Admin from "./pages/admin/Home/Home";
+
 
 // API Login
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
@@ -29,6 +35,7 @@ function App() {
   return (
     <div>
       <Routes>
+        {/* user routes */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Testt />} />
         <Route path="/login" element={localStorage.getItem('auth_token') ? <Navigate to='/'/> : <Login/>} />
@@ -37,7 +44,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
         {/* admin routes */}
-        
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<Admin />} />
       </Routes>
     </div>
   );

@@ -1,4 +1,4 @@
-import logoimg from "../../user/assets/img/logo-black.png";
+import logoimg from "../../assets/img/logo-black.png";
 
 export const BrandLogo = () => {
   return <img className="h-14 mobile:h-13" src={logoimg} alt="Araktek Logo" />;

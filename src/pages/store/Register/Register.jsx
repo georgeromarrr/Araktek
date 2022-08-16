@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../../../components/user/Navbar/Navbar";
-import Footer from "../../../components/user/Footer/Footer";
+import Navbar from "../../../components/store/Navbar/Navbar";
+import Footer from "../../../components/store/Footer/Footer";
 
 const Register = () => {
   let navigate = useNavigate();

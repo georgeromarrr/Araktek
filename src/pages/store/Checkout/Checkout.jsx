@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../../components/user/Navbar/Navbar";
-import Footer from "../../../components/user/Footer/Footer";
-import { BrandLogo } from "../../../components/user/Navbar/NavbarComponents";
+import Navbar from "../../../components/store/Navbar/Navbar";
+import Footer from "../../../components/store/Footer/Footer";
+import { BrandLogo } from "../../../components/store/Navbar/NavbarComponents";
 import product from "./laptop1.jpg";
 import { Link, useNavigate } from "react-router-dom";
 const Checkout = () => {
