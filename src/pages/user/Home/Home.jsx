@@ -39,11 +39,12 @@ const Home = () => {
         <Product
         key={idx}
         imageName={`http://127.0.0.1:8000/${item.image}`}
-        ratings={0}
-        reviewNum={0}
+        ratings={item.rating}
+        reviewNum={item.review}
         title={item.name}
         origprice={item.original_price}
         sellprice={item.selling_price}
+
         
     />
       )

@@ -56,16 +56,16 @@ const Product = (props) => {
           <div className="flex flex-row justify-between mt-2 mb-4 gap-4">
             {/* price */}
             <div className="flex flex-row">
-              <p className="text-sm">₱ {parseInt(props.sellprice).toLocaleString()}</p>
+              <p className="text-sm">₱ {props.sellprice.toLocaleString()}</p>
               <span className="text-sm mx-1">   </span>
-              <span className="text-sm"><s>₱ {parseInt(props.origprice).toLocaleString()}</s></span>
+              <span className="text-sm"><s>₱ {props.origprice.toLocaleString()}</s></span>
             </div>
 
             {/* rating */}
             <div className="flex items-center">
               <Rating
                 name="half-rating-read"
-                defaultValue={0}
+                defaultValue={props.ratings}
                 precision={0.5}
                 readOnly
                 sx={{
@@ -76,7 +76,7 @@ const Product = (props) => {
               />
 
               {/* rating number */}
-              <span className="text-sm">({0})</span>
+              <span className="text-sm">({props.reviewNum})</span>
             </div>
           </div>
         </div>
