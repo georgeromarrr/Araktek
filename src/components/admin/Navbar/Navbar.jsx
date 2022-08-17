@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <div className="border border-black inset-x-0 rounded-md mt-2 mr-2 bg-gray-50 dark:bg-neutral-900 dark:border-white dark:text-white">
       <nav className="py-4 mx-12 flex justify-between">
-        <Link to="/">
+        <Link to="/admin/dashboard">
           <BrandLogo />
         </Link>
 
