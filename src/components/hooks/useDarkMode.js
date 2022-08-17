@@ -47,7 +47,7 @@ const DarkMode = () => {
     <button
       onClick={() => setSwitch(!isSwitch)}
       type="button"
-      className="ml-6 p-2 flex items-center rounded-full bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-700"
+      className="ml-6 p-2 flex items-center rounded-full border border-black  bg-gray-100 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-600 dark:border-white"
     >
       {isSwitch ? <NightIcon /> : <DayIcon />}
     </button>

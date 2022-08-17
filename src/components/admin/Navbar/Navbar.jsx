@@ -19,8 +19,8 @@ const Navbar = () => {
   });
 
   return (
-    <div className="border-b border-black shadow-sm inset-x-0 bg-white dark:bg-stone-900 w-full">
-      <nav className="py-4 mx-6 flex justify-between">
+    <div className="border border-black inset-x-0 rounded-md mt-2 mr-2 bg-gray-50 dark:bg-neutral-900 dark:border-white dark:text-white">
+      <nav className="py-4 mx-12 flex justify-between">
         <Link to="/">
           <BrandLogo />
         </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
             <button
               ref={useDropdown}
               type="button"
-              className="text-black flex items-center hover:bg-gray-200 p-2 rounded-lg"
+              className="text-black flex items-center hover:bg-gray-200 p-2 rounded-lg relative"
               onClick={() => setOpen(!isOpen)}
             >
               <p className="font-semibold pr-1 dark:text-white">
