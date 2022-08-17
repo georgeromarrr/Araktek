@@ -20,6 +20,8 @@ import AdminLogin from "./pages/admin/Login/Login";
 import Admin from "./pages/admin/Home/Home";
 import Category from "./pages/admin/Category/Category"
 import AdminPrivateRoute from './AdminPrivateRoute'
+import AddtoCategory from './pages/admin/Category/AddtoCategory'
+import EdittoCategory from './pages/admin/Category/EdittoCategory'
 
 // API Login
 
@@ -60,7 +62,9 @@ function App() {
           <Route path="/admin" element={<Navigate to="/admin/dashboard" /> } />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<Admin />} />
-          <Route path="/admin/category" element={<Category />} />
+          <Route path="/admin/category" element={<AddtoCategory />} />
+          <Route path="/admin/editcategory" element={<EdittoCategory />} />
+          <Route path="/admin/viewcategory" element={<Category />} />
         </Route>
       </Routes>
     </div>

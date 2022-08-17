@@ -11,6 +11,7 @@ const Home = () => {
   const [loading, setLoading]= useState(true);
   const [product, setProduct]= useState([]);
 
+  
   useEffect(()=>{
  
     axios.get(`/api/allproduct`).then(res=>{

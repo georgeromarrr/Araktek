@@ -1,6 +1,10 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
+import swal from "sweetalert";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CategTableContianer = (props) => {
+
   return (
     <>
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 container my-auto">

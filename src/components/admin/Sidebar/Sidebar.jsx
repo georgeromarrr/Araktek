@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import useClickOutside from "../../hooks/useClickOutside";
 import DateTime from "../Date/DateTime";
 import {
@@ -32,11 +33,13 @@ const Sidebar = () => {
             <HomeIcon />
             <span className="text-lg">HOME</span>
           </li>
-
+          <Link to='/admin/category'>
           <li className="flex items-center px-4 gap-4 cursor-pointer hover:bg-gray-200 rounded-lg p-2">
             <CategoryIcon />
             <span className="text-lg">CATEGORY</span>
           </li>
+          </Link>
+         
 
           <li className="flex items-center px-4 gap-4 cursor-pointer hover:bg-gray-200 rounded-lg p-2">
             <PhotoIcon />
