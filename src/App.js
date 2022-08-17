@@ -14,7 +14,15 @@ import Wishlist from './pages/user/Wishlist/Wishlist'
 import Account from './pages/user/Account/Account'
 import ViewProduct from './pages/user/Products/ViewProduct'
 import ProductDetail from './pages/user/ProductDetail/ProductDetail'
+
+// admin pages
+import AdminLogin from "./pages/admin/Login/Login";
+import Admin from "./pages/admin/Home/Home";
+import Category from "./pages/admin/Category/Category"
+
+
 // API Login
+
 axios.defaults.baseURL ="http://127.0.0.1:8000/";
 axios.defaults.headers.post['Content-Type']='application/json';
 axios.defaults.headers.post['Accept']='application/json';
@@ -26,6 +34,8 @@ axios.interceptors.request.use(function(config){
   config.headers.Authorization= token ? `Bearer ${token}` : '';
   return config
 })
+
+
 
 function App() {
   
@@ -45,7 +55,9 @@ function App() {
         <Route path="/:slug/:product" element={<ProductDetail />} />
 
         {/* admin routes */}
-        
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<Admin />} />
+        <Route path="/admin/category" element={<Category />} />
       </Routes>
     </div>
   );

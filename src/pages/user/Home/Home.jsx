@@ -28,9 +28,10 @@ const Home = () => {
 
   if(loading){
     return (
-      <div className="flex justify-center items-center">
-      <h1 className="text-2xl">Loading all products...</h1>
+      <div className="container mx-auto flex items-center justify-center">   
+        <h1 className="text-2xl">Loading all products...</h1>       
       </div>
+     
     )
    
 
