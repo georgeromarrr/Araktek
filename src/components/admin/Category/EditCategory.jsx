@@ -5,7 +5,7 @@ const AddCategory = () => {
     <div className="m-10 py-1">
       <div className="my-2 flex justify-between items-start">
         <p className="text-3xl font-bold uppercase mb-10 dark:text-white">
-          Add New Category
+          Edit Category
         </p>
         <button
           type="button"
@@ -63,7 +63,7 @@ const AddCategory = () => {
               type="submit"
               className="border w-4/12 bg-gray-100 text-black border-black py-2 px-12 rounded-md hover:bg-green-400 hover:border-black"
             >
-              Submit
+              Update
             </button>
           </div>
         </form>

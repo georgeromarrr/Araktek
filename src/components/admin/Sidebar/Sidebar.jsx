@@ -25,7 +25,7 @@ const Sidebar = () => {
 
   return (
     <div className="w-64 inset-0 order-1 p-2 dark:text-white">
-      <div className="py-8 px-3 h-screen rounded-md border border-black dark:border-white">
+      <div className="py-8 px-3 h-[98.5vh] rounded-md border border-black dark:border-white">
         <DateTime />
         <ul className="space-y-4 py-6">
           <li className="flex items-center px-4 gap-4 cursor-pointer hover:bg-gray-200 rounded-lg p-2">
