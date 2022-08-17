@@ -19,7 +19,7 @@ import ProductDetail from './pages/user/ProductDetail/ProductDetail'
 import AdminLogin from "./pages/admin/Login/Login";
 import Admin from "./pages/admin/Home/Home";
 import Category from "./pages/admin/Category/Category"
-
+import AdminPrivateRoute from './AdminPrivateRoute'
 
 // API Login
 
@@ -55,9 +55,12 @@ function App() {
         <Route path="/:slug/:product" element={<ProductDetail />} />
 
         {/* admin routes */}
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<Admin />} />
-        <Route path="/admin/category" element={<Category />} />
+        <Route element={<AdminPrivateRoute />} >
+          <Route path="/admin" element={<Navigate to="/admin/dashboard" /> } />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<Admin />} />
+          <Route path="/admin/category" element={<Category />} />
+        </Route>
       </Routes>
     </div>
   );
