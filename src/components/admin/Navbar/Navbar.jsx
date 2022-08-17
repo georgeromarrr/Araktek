@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BrandLogo, ArrIcon, DayIcon, NightIcon } from "./NavbarComponents";
 import useClickOutside from "../../hooks/useClickOutside";
 import DarkMode from "../../hooks/useDarkMode";
+import axios from 'axios';
+import swal from "sweetalert";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -17,6 +19,25 @@ const Navbar = () => {
   const useDropdown = useClickOutside(() => {
     setOpen(false);
   });
+
+
+  // Logout function
+  const navigate = useNavigate();
+
+  const logoutSubmit = (e) => {
+      e.preventDefault();
+
+      axios.post(`/api/logout`).then(res=> {
+          if(res.data.status === 200) {
+              localStorage.removeItem(`auth_token`);
+              localStorage.removeItem(`auth_name`);
+              swal('Success',res.data.message,'success');
+              console.log(res.data.message)
+              navigate('/');
+          }
+      })
+  }
+
 
   return (
     <div className="border border-black inset-x-0 rounded-md mt-2 mr-2 bg-gray-50 dark:bg-neutral-900 dark:border-white dark:text-white">
@@ -48,7 +69,7 @@ const Navbar = () => {
                   <li className="font-semibold cursor-pointer hover:bg-gray-300 hover:text-gray-500 p-2 rounded-sm">
                     Settings
                   </li>
-                  <li className="font-semibold cursor-pointer hover:bg-gray-300 hover:text-gray-500 p-2 rounded-sm">
+                  <li className="font-semibold cursor-pointer hover:bg-gray-300 hover:text-gray-500 p-2 rounded-sm" onClick={logoutSubmit}>
                     Log Out
                   </li>
                 </ul>
