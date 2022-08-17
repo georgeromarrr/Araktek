@@ -10,7 +10,7 @@ import {
 const Panels = () => {
   return (
     <div className="grid grid-cols-3 gap-8 mx-10 my-8 dark:text-white ">
-      <div className="p-8 bg-inherit rounded-sm shadow-lg text-center border border-black h-full dark:border-white">
+      <div className="p-8 bg-inherit rounded-md shadow-lg text-center border border-black h-full dark:border-white">
         <div className="flex justify-between m-1">
           <div className="space-y-3">
             <div className="flex items-center">
@@ -30,7 +30,7 @@ const Panels = () => {
           </span>
         </div>
       </div>
-      <div className="p-8 bg-inherit rounded-sm shadow-lg text-center border border-black h-full dark:border-white">
+      <div className="p-8 bg-inherit rounded-md shadow-lg text-center border border-black h-full dark:border-white">
         <div className="flex justify-between m-1 gap-4">
           <div className="space-y-3">
             <div className="flex items-center">
@@ -50,7 +50,7 @@ const Panels = () => {
           </span>
         </div>
       </div>
-      <div className="p-8 bg-inherit rounded-sm shadow-lg text-center border border-black h-full dark:border-white">
+      <div className="p-8 bg-inherit rounded-md shadow-lg text-center border border-black h-full dark:border-white">
         <div className="flex justify-between m-1">
           <div className="space-y-3">
             <div className="flex items-center">
