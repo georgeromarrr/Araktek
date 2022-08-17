@@ -15,6 +15,7 @@ import Cart from './pages/store/Cart/Cart';
 // admin pages
 import AdminLogin from "./pages/admin/Login/Login";
 import Admin from "./pages/admin/Home/Home";
+import Category from "./pages/admin/Category/Category"
 
 
 // API Login
@@ -46,6 +47,7 @@ function App() {
         {/* admin routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<Admin />} />
+        <Route path="/admin/category" element={<Category />} />
       </Routes>
     </div>
   );

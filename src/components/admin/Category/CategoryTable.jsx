@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
-import TableContainer from "./TableContainer";
-import TableData from "./TableData";
+import categ_data from "./categ_data";
+import CategTableContianer from "./CategTableContianer";
 
-const DashboardTabLe = () => {
+const CategoryTable = () => {
   const [pageNum, setPageNum] = useState(1);
   const [itemFirst, setFirst] = useState(0);
   const [itemLast, setItemLast] = useState(5);
@@ -12,7 +11,7 @@ const DashboardTabLe = () => {
     let currentPage = pageNum;
     let Last = itemLast * pageNum;
 
-    if (TableData.length >= Last) {
+    if (categ_data.length >= Last) {
       currentPage += 1;
       setPageNum(currentPage);
     }
@@ -30,9 +29,11 @@ const DashboardTabLe = () => {
   };
 
   return (
-    <div className="mx-10 py-1">
-      <div className="my-2 flex justify-center">
-        <p className="text-3xl font-bold dark:text-white">Products</p>
+    <div className="m-10 py-1">
+      <div className="my-2 flex justify-start">
+        <p className="text-3xl font-bold uppercase mb-16 dark:text-white">
+          Category
+        </p>
       </div>
       <div className="flex justify-between my-2">
         <div className="flex gap-3 items-center relative">
@@ -56,9 +57,9 @@ const DashboardTabLe = () => {
         </div>
         <button
           type="button"
-          className="border border-green-400 text-green-400 py-2 px-6 rounded-md hover:bg-green-400 hover:text-white"
+          className="border border-green-600 text-green-600 py-2 px-6 rounded-md hover:bg-green-400 hover:text-white"
         >
-          Go to Products
+          Add New Category
         </button>
       </div>
       <div className="overflow-x-auto relative rounded-md border border-black">
@@ -69,13 +70,10 @@ const DashboardTabLe = () => {
                 Id
               </th>
               <th scope="col" className="py-3 px-6 text-center">
-                Product Name
-              </th>
-              <th scope="col" className="py-3 px-6 text-center">
                 Category
               </th>
               <th scope="col" className="py-3 px-6 text-center">
-                Quantity
+                Product Type
               </th>
               <th scope="col" className="py-3 px-6 text-center">
                 Status
@@ -86,12 +84,11 @@ const DashboardTabLe = () => {
             </tr>
           </thead>
           <tbody>
-            {TableData.slice(itemFirst, itemLast).map((item) => (
-              <TableContainer
+            {categ_data.slice(itemFirst, itemLast).map((item) => (
+              <CategTableContianer
                 id={item.id}
                 title={item.title}
-                category={item.category}
-                quantity={item.quantity}
+                product_type={item.product_type}
                 status={item.status}
               />
             ))}
@@ -102,4 +99,4 @@ const DashboardTabLe = () => {
   );
 };
 
-export default DashboardTabLe;
+export default CategoryTable;
