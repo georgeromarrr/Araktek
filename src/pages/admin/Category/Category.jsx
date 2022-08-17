@@ -4,8 +4,6 @@ import Navbar from "../../../components/admin/Navbar/Navbar";
 import CategoryTable from "../../../components/admin/Category/CategoryTable";
 import AddCategory from "../../../components/admin/Category/AddCategory";
 import EditCategory from "../../../components/admin/Category/EditCategory";
-import AddSEOCategory from "../../../components/admin/Category/AddSEOCategory";
-import EditSEOCategory from "../../../components/admin/Category/EditSEOCategory";
 
 const Category = () => {
   return (
