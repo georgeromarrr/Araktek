@@ -15,7 +15,7 @@ const Category = () => {
           <Navbar />
           <div className="mr-2 my-2 p-3 bg-inherit rounded-md text-center border border-black dark:border-white h-[88vh]">
             {/* <CategoryTable /> */}
-            <EditSEOCategory />
+            <EditCategory />
           </div>
         </div>
         <Sidebar />

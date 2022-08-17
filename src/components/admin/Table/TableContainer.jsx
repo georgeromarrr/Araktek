@@ -21,12 +21,21 @@ const TableContainer = (props) => {
           >
             Update
           </button>
-          <button
-            type="button"
-            className="border border-red-400 text-red-400 py-2 px-6 rounded-md hover:bg-red-400 hover:text-white"
-          >
-            Deactive
-          </button>
+          {props.status ? (
+            <button
+              type="button"
+              className="border border-red-400 text-red-400 py-2 px-6 rounded-md hover:bg-red-400 hover:text-white"
+            >
+              Deactive
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="border border-green-400 text-green-400 py-2 px-6 rounded-md hover:bg-green-400 hover:text-white"
+            >
+              Active
+            </button>
+          )}
         </td>
       </tr>
     </>
