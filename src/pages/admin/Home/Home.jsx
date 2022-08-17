@@ -14,7 +14,7 @@ const Home = () => {
           <div className="mr-2 my-2 p-3 bg-inherit rounded-md text-center border border-black dark:border-white h-[88vh]">
             <Panels />
             <DashboardTabLe />
-            <Footer />
+            <Footer classStyle="mt-8"></Footer>
           </div>
         </div>
         <Sidebar />
