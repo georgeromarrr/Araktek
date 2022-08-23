@@ -16,8 +16,8 @@ const Home = () => {
  
     axios.get(`/api/allproduct`).then(res=>{
         if(res.data.status === 200){
-          console.log(res.data.products)
-          setProduct(res.data.products)
+          console.log(res.data.product)
+          setProduct(res.data.product)
           setLoading(false);
         }
     });

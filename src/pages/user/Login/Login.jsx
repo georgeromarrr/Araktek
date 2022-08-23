@@ -58,7 +58,6 @@ return (
           </div>
           <div className='flex flex-col'>
             <span className='text-center text-sm text-red-600 mb-5'>{login.error_wrong}</span>
-            <span className='text-xs text-red-600'>{login.error_list.email}</span>
           </div>
           <input onChange={handleInput} value={login.email} name='email' type="email" className='h-12 w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4' placeholder='Email Address' />
           <span className='text-xs text-red-600'>{login.error_list.password}</span>
