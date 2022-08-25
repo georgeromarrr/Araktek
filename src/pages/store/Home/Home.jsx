@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "../../../components/store/Navbar/Navbar";
-import Footer from "../../../components/store/Footer/Footer";
-import { HeaderTitle } from "../../../components/store/Header/Header";
-import Productdata from "../../../components/store/Product/ProductData";
-import Product from "../../../components/store/Product/Product";
+import Navbar from "../../../components/user/Navbar/Navbar";
+import Footer from "../../../components/user/Footer/Footer";
+import { HeaderTitle } from "../../../components/user/Header/Header";
+import Productdata from "../../../components/user/Product/ProductData";
+import Product from "../../../components/user/Product/Product";
 import { Link, Route } from "react-router-dom";
 
-const Home = () => {
   return (
     <>
       <Navbar />
@@ -24,20 +23,10 @@ const Home = () => {
           PRODUCTS
         </h1>
         <div className="mt-6 grid grid-cols-4 gap-y-12 gap-x-12 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
-          {Productdata.map((item) => (
-            <Product
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              imageName={item.imageName}
-              ratings={item.ratings}
-              reviewNum={item.reviewNum}
-              item={item}
-            />
-          ))}
+          {showAll}
         </div>
       </div>
-
+      <Shopify/>    
       <Footer />
     </>
   );

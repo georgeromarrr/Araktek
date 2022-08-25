@@ -1,9 +1,37 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import swal from "sweetalert";
 
 const Product = (props) => {
   const [isHover, setHover] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const message= "ADD TO CART IS ON DEVELOPMENT"
+  const submitAddtocart=(e)=>{
+    e.preventDefault();
+    console.log(props.title);
+    console.log(props.idx);
+    swal("Warning", message, "error");
+    // const data = {
+    //   product_id: props.idx,
+    //   qty: quantity,
+    // }
+    // // console.log(data);
+    // axios.post(`/api/addcart`, data).then(res=>{
+    //   if(res.data.status === 201){
+    //     swal("Warning", res.data.message, "warning");
+    //     console.log(res.data.message);
+    //   }else if(res.data.status === 409){
+    //     swal("Warning", res.data.message, "warning");
+    //     console.log(res.data.message);
+    //   }else if(res.data.status === 401){
+    //     swal("Warning", res.data.message, "error");
+    //     console.log(res.data.message);
+    //   }
+
+    // });
+  }
 
   return (
     <div
@@ -13,11 +41,13 @@ const Product = (props) => {
     >
       <div className="group relative" key={props.id}>
         <div className="w-full h-96 bg-white aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 relative">
+        <Link to={`/${props.categs}/${props.prods}`}>
           <img
             src={props.imageName}
             alt="img display"
             className="w-full h-full object-center object-contain"
           />
+          </Link>
 
           {/* favorites */}
           <button
@@ -30,6 +60,7 @@ const Product = (props) => {
 
           {/* add to cart */}
           <button
+            onClick={submitAddtocart}
             className={`bg-black text-white inset-x-1 bottom-1 object-center py-2 px-12 absolute ${
               isHover ? "" : "hidden"
             }`}
@@ -54,9 +85,9 @@ const Product = (props) => {
           <div className="flex flex-row justify-between mt-2 mb-4 gap-4">
             {/* price */}
             <div className="flex flex-row">
-              <p className="text-sm">₱ {props.price.toLocaleString()}</p>
-              <span className="text-sm mx-1"> - </span>
-              <span className="text-sm">₱ {props.price.toLocaleString()}</span>
+              <p className="text-sm">₱ {props.sellprice.toLocaleString()}</p>
+              <span className="text-sm mx-1">   </span>
+              <span className="text-sm"><s>₱ {props.origprice.toLocaleString()}</s></span>
             </div>
 
             {/* rating */}
